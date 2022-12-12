@@ -7,7 +7,7 @@ const {connection} = require("./config/db")
 const {authentication} = require("./middlewares/authentification")
 
 const app = express();
-const PORT =  process.env.PORT_NO || 7080 ;
+let PORT =  process.env.PORT_NO || 7080 ;
 
 app.use(express.json());
 
