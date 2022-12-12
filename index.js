@@ -24,11 +24,11 @@ app.use("/todos", todosController)
 app.listen(PORT, async () => {
     try{
         await connection;
-        console.log("Connected to db")
+        console.log("My DataBase is Online...")
     }
     catch(err){
         console.log("Error connnecting to DB")
         console.log(err)
     }
-    console.log(`listening on PORT ${PORT}`)
+    console.log(`listening on PORT 8080`)
 })
