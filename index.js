@@ -1,13 +1,13 @@
 const express = require("express")
 const cors = require("cors")
-// require("dotenv").config();
+require("dotenv").config();
 const {userController} = require("./routes/user.route")
 const {todosController} = require("./routes/todos.route")
 const {connection} = require("./config/db")
 const {authentication} = require("./middlewares/authentification")
 
 const app = express();
-const PORT = 7080 ;
+const PORT =  process.env.PORT_NO || 7080 ;
 
 app.use(express.json());
 
